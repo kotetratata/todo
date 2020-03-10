@@ -1,0 +1,6 @@
+div>div:nth-child(n+2){
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid mediumpurple;
+}
+

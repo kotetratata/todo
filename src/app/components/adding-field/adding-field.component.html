@@ -1,0 +1,22 @@
+<p>{{status}}, {{name}}, {{date}}, {{cat}}</p><br>
+<p>{{storageInfo}}</p>
+
+<ng-template [ngIf]="status=='startValue'">
+	<p>adding task</p>
+	<input type="text" placeholder="enter task name" #nameField>
+	<button (click)="getName(nameField.value)">enter</button>
+</ng-template>
+
+
+<ng-template [ngIf]="status=='named'">
+	<p>oriental ending date</p>
+	<input type="text" placeholder="DD/MM/YYYY" #dateField>
+	<button (click)="getDate(dateField.value)">skip</button>
+</ng-template>
+
+
+<ng-template [ngIf]="status=='dated'">
+	<p>task category</p>
+	<input type="text" placeholder="category" #catField>
+	<button (click)="getCategory(catField.value)">default category</button>
+</ng-template>

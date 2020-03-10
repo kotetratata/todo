@@ -1,0 +1,19 @@
+<div style="border: 1px solid black; width:400px;">
+  <div style="display:flex;justify-content:space-around; border: 1px solid yellow;" (click)="changeSearch($event)">
+    <p>id</p>
+    <p>name</p>
+    <p>status</p>
+    <p>category</p>
+    <p>time left</p>
+  </div>
+  <div *ngFor="let item of this.todoStorage" style="display: flex; justify-content: space-between">
+    <p style="flex-basis: 50px; ">{{this.todoStorage.indexOf(item)+1}}</p>
+    <p style="flex-basis: 100px;">{{item.name}}</p>
+    <p style="flex-basis: 70px;" (click)="changeStatus($event)">{{item.status}}</p>
+    <p style="flex-basis: 100px;">{{item.category}}</p>
+    <p style="flex-basis: 60px;">{{item.endingDate - item.startDate}}</p>
+    <div style="position: absolute; right: -100px;top: 6.5px; padding: 10px;"  (click)="deleteTask($event)">REMOVE</div>
+  </div>
+  <p>{{searchType+searchDirection}}</p>
+
+</div>
