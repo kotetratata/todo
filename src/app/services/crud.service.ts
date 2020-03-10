@@ -27,7 +27,7 @@ export class CrudService {
   }
 
   updateItem() {
-    //
+    localStorage.setItem('todoStorage', JSON.stringify(this.todoStorage));
   }
 
   deleteItem(id: number) {

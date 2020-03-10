@@ -41,6 +41,7 @@ export class TodolistComponent implements OnInit {
     this.CrudService.todoStorage[index].status ?
       this.CrudService.todoStorage[index].status = false :
       this.CrudService.todoStorage[index].status = true;
+    this.CrudService.updateItem();
   }
 
   deleteTask(event) {
